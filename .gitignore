@@ -1,0 +1,4 @@
+/bin/
+/fraude-code
+*.test
+.DS_Store
