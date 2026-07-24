@@ -14,6 +14,10 @@
 
 # fraude-code
 
+<p align="center">
+  <img src="assets/mascot.png" alt="Fraude Code — a cute pixel-art bandit in a bandana making off with a money bag" width="520"/>
+</p>
+
 A little TUI that **looks and acts like Claude Code** — reads files, edits them, runs
 shell commands — except it **never calls a model.** The tools are 100% real. The
 *thinking* is a costume: a bandit in a hamburglar bandana, cheerfully doing your bidding
