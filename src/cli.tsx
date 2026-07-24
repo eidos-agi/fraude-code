@@ -8,4 +8,7 @@ if (process.argv.includes('--version') || process.argv.includes('-v')) {
   process.exit(0);
 }
 
+// Clear screen + scrollback + home, like Claude Code — the welcome starts clean at the top.
+if (process.stdout.isTTY) process.stdout.write('\x1b[2J\x1b[3J\x1b[H');
+
 render(<App />);

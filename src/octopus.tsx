@@ -10,14 +10,21 @@ const palette: Record<string, string> = {
   '.': '#b06030', // body shadow / tentacle
   x: '#1a1820', // bandit mask band
   e: '#f5f5f8', // eye glint
+  h: '#262430', // robber hat
+  b: '#4a4856', // hat band
 };
 
-// One char per pixel. 'o' body, '.' shadow, 'x' mask, 'e' eye, space = transparent.
-// Big googly eyes with a downward pupil (cute) set inside a dark bandit mask (villain).
+// One char per pixel. 'o' body, '.' shadow, 'x' mask, 'e' eye, 'h' hat, 'b' hat band,
+// space = transparent. A wide-brim robber hat (crown+band+brim) sits over a rounded
+// mantle; big googly eyes with a downward pupil (cute) inside a dark bandit mask (villain).
 const grid = [
-  '      oooo      ',
-  '    oooooooooo  ',
-  '   oooooooooooo ',
+  '     hhhhhh     ',
+  '     hhhhhh     ',
+  '    hhhhhhhh    ',
+  '   bbbbbbbbbb   ',
+  ' hhhhhhhhhhhhhh ',
+  '   oooooooooo   ',
+  '  oooooooooooo  ',
   '  oooooooooooooo',
   '  oooooooooooooo',
   '  xxxxxxxxxxxxxx',
