@@ -1,21 +1,7 @@
-```
-   ╭────────────────────────────────╮
-   │        ·  ✷        ✷  ·         │
-   │         ╭──────────────╮        │
-   │         │ ▟▛████████▜▙  │       │
-   │         │  ▀▀      ▀▀   │       │   fraude-code
-   │         │   ▂    ▂      │       │   the AI is a costume;
-   │         │    ╲__╱       │       │   the work is real.
-   │         ╰──────────────╯        │
-   │      "wanted for impersonating  │
-   │       a language model"         │
-   ╰────────────────────────────────╯
-```
-
 # fraude-code
 
 <p align="center">
-  <img src="assets/splash.png" alt="Fraude Code splash — a pixel-art bandit walking off with a money bag, trailing footprints, 'Agent mode (1M context) · Max'" width="720"/>
+  <img src="assets/welcome.gif" alt="Fraude Code welcome — a bandit-masked octopus in a robber hat beside the title, a status line naming its parody accomplices, and a boxed prompt; cleared to the top like the real thing" width="900"/>
 </p>
 
 A little TUI that **looks and acts like Claude Code** — reads files, edits them, runs
