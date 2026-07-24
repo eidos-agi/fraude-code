@@ -6,80 +6,47 @@ import Octopus from './octopus.js';
 export const version = '0.3.0';
 export const amber = '#e8964f';
 
+// Parody "MCP servers" — criminal knock-offs of the real integrations. None connect; they
+// all turned down the job. Add more here as the rap sheet grows.
+const accomplices = ['Chrime', 'Gfail', 'Schemes', 'Extort'];
+
 function cwd(): string {
   const dir = process.cwd();
   const home = os.homedir();
   return dir.startsWith(home) ? '~' + dir.slice(home.length) : dir;
 }
 
-// A faithful reskin of Claude Code's welcome: rounded amber box, a bold greeting, the
-// bandit octopus, an identity line and cwd on the left; tips + "what's new" on the right,
-// split by a vertical divider. The tells stay in — $0.00, the bandana, the confession.
+// Section-for-section faithful to Claude Code's welcome (v2.1.219): the creature sits to
+// the LEFT of a three-line title block (name+version / model+plan / cwd); then a one-line
+// warning, then a one-line tip. No outer box, no invented panels. The tells stay — the
+// $0.00 warning, the bandit hat, the confession in the footer.
 export default function Welcome(): React.ReactElement {
-  const user = os.userInfo().username || 'friend';
   return (
     <Box flexDirection="column">
-      <Box
-        borderStyle="round"
-        borderColor={amber}
-        paddingX={1}
-        flexDirection="column"
-      >
-        <Box justifyContent="center">
+      <Box>
+        <Box marginRight={2}>
+          <Octopus />
+        </Box>
+        <Box flexDirection="column">
           <Text bold color={amber}>
             Fraude Code <Text dimColor>v{version}</Text>
           </Text>
-        </Box>
-        <Box marginTop={1}>
-          <Box
-            flexDirection="column"
-            width="42%"
-            alignItems="center"
-            paddingRight={1}
-          >
-            <Text bold>Welcome back {user}!</Text>
-            <Box marginY={1}>
-              <Octopus />
-            </Box>
-            <Text dimColor>Fraude {version} (∞ context)</Text>
-            <Text dimColor>Fraud Max · {user}'s Heist</Text>
-            <Text dimColor>{cwd()}</Text>
-          </Box>
-          <Box
-            flexDirection="column"
-            flexGrow={1}
-            paddingLeft={1}
-            borderStyle="single"
-            borderColor={amber}
-            borderTop={false}
-            borderRight={false}
-            borderBottom={false}
-          >
-            <Text bold color={amber}>
-              Tips for getting started
-            </Text>
-            <Text>{'read <file> really reads it; run <cmd> really runs it'}</Text>
-            <Box marginTop={1}>
-              <Text bold color={amber}>
-                What's new
-              </Text>
-            </Box>
-            <Text>Nothing — there is no model to update</Text>
-            <Text>Still $0.00. Still a fraud.</Text>
-            <Text>Now with a bandana.</Text>
-            <Text dimColor italic>
-              /release-notes (there are none)
-            </Text>
-          </Box>
+          <Text dimColor>Faux 5 (∞ context) · Fraud Max</Text>
+          <Text dimColor>{cwd()}</Text>
         </Box>
       </Box>
-      <Text>
-        <Text color="#e8c020">⚠ </Text>
-        0 MCP servers connected — we don&apos;t call any{' '}
-        <Text dimColor>· $0.00 spent</Text>
-      </Text>
-      <Box justifyContent="flex-end">
-        <Text color="#8a8a8a">● maximum · /effort</Text>
+      <Box marginTop={1}>
+        <Text>
+          <Text color="#e8c020">⚠ </Text>
+          0 MCP servers connected — {accomplices.join(', ')} wouldn&apos;t take the job{' '}
+          <Text dimColor>· $0.00 spent</Text>
+        </Text>
+      </Box>
+      <Box marginTop={1}>
+        <Text>
+          {' '}Tackle your toughest work with Faux 5 — it can&apos;t think, but the tools
+          are real.
+        </Text>
       </Box>
     </Box>
   );

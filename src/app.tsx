@@ -48,7 +48,17 @@ export default function App(): React.ReactElement {
           {e.out ? <Text>{e.out}</Text> : null}
         </Box>
       ))}
-      <Box borderStyle="round" borderColor={amber} paddingX={1} marginTop={1}>
+      {/* effort tag, bottom-right, like Claude's "● high · /effort" */}
+      <Box justifyContent="flex-end" marginTop={1}>
+        <Text color="#8a8a8a">● maximum · /effort</Text>
+      </Box>
+      {/* input framed by top + bottom rules (full width), like Claude — not a rounded box */}
+      <Box
+        borderStyle="single"
+        borderColor={amber}
+        borderLeft={false}
+        borderRight={false}
+      >
         <Text color={amber}>❯ </Text>
         <TextInput
           value={value}

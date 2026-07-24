@@ -25,6 +25,13 @@ for **$0.00**.
 
 *fraude* — French for "fraud." Because it is one, and proud of it.
 
+<p align="center">
+  <img src="assets/fraude-use.gif" alt="fraude-code in use: it lists a directory, runs a piped shell command, writes a file and reads it back, then shrugs at a philosophical question — all for $0.00" width="820"/>
+</p>
+
+Above: real `ls`, a real piped shell command, a real `write` then `read` — and a cheerful
+shrug when you ask it to *think*. The tools are genuine; only the brain is a costume.
+
 ## Why
 
 - **Testing** — anything that supervises, drives, or reads coding-agent sessions (a fleet
