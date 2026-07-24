@@ -1,3 +1,5 @@
+**v0.2.0: box, columns, theme, status, effort, footer all shipped. Remaining: live input box (needs a bubbletea TUI), narrow-term collapse, version gag.**
+
 # Making fraude's welcome a pixel-faithful Claude Code reskin
 
 The gag only lands if, at a glance, `fraude` **is** Claude Code — and only the fine print
@@ -25,16 +27,16 @@ tell. Everything else should converge.
 
 ## To-do — make it identical (reskinned)
 
-- [ ] **Full-width rounded box** with the title on the top border: `─ Fraude Code v0.1.0 ─`.
+- [x] **Full-width rounded box** with the title on the top border: `─ Fraude Code v0.1.0 ─`.
       Responsive to terminal width, like Claude's.
-- [ ] **Orange/amber theme** via ANSI (border + section headings) to match Claude's accent.
-- [ ] **Two-column interior** with a vertical divider.
+- [x] **Orange/amber theme** via ANSI (border + section headings) to match Claude's accent.
+- [x] **Two-column interior** with a vertical divider.
 - [ ] Left column: **"Welcome back {$USER}!"** (bold, centered), the **bandana critter**
       (keep the mask), then the identity line and the cwd.
-- [ ] **Identity line, reskinned:** `Fraude 0.1.0 (∞ context) · Fraud Max · {user}'s Heist`.
+- [x] **Identity line, reskinned:** `Fraude 0.1.0 (∞ context) · Fraud Max · {user}'s Heist`.
 - [ ] Right column: **"Tips for getting started"** + one joke tip; a divider; **"What's new"**
       + 3 joke bullets; `/release-notes (there are none)`.
-- [ ] **Status line:** `⚠ 0 MCP servers connected — we don't call any · $0.00 spent`.
+- [x] **Status line:** `⚠ 0 MCP servers connected — we don't call any · $0.00 spent`.
 - [ ] **`● maximum · /effort`** bottom-right (theatrical).
 - [ ] **Box the input line** (top + bottom rules) with `❯`.
 - [ ] **Footer:** `⏵⏵ auto mode on (shift+tab to cycle) · ← for agents`.

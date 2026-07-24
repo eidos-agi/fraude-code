@@ -15,30 +15,17 @@ import (
 	"github.com/eidos-agi/fraude-code/internal/mock"
 )
 
-const version = "0.1.0"
+const version = "0.2.0"
 
-// The suspect. A Claude-ish creature in a hamburglar bandana.
-const banner = `
-   ╭────────────────────────────────╮
-   │        ·  ✷        ✷  ·         │
-   │         ╭──────────────╮        │
-   │         │ ▟▛████████▜▙  │       │
-   │         │  ▀▀      ▀▀   │       │   fraude-code
-   │         │   ▂    ▂      │       │   the AI is a costume;
-   │         │    ╲__╱       │       │   the work is real.
-   │         ╰──────────────╯        │
-   │      "wanted for impersonating  │
-   │       a language model"         │
-   ╰────────────────────────────────╯
-`
 
 func main() {
 	if len(os.Args) > 1 && (os.Args[1] == "version" || os.Args[1] == "--version" || os.Args[1] == "-v") {
 		fmt.Println("fraude-code", version)
 		return
 	}
-	fmt.Print(banner)
-	fmt.Printf("  fraude-code v%s · $0.00 spent so far · type /help\n\n", version)
+	fmt.Print(renderWelcome())
+	fmt.Println(footerLine())
+	fmt.Println()
 
 	in := bufio.NewScanner(os.Stdin)
 	in.Buffer(make([]byte, 0, 1024*1024), 8*1024*1024)
