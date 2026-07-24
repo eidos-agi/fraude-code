@@ -1,4 +1,12 @@
-**v0.2.0: box, columns, theme, status, effort, footer all shipped. Remaining: live input box (needs a bubbletea TUI), narrow-term collapse, version gag.**
+**v0.3.0 — PIVOTED TO INK (React for terminals), Claude Code's actual stack.** The Go
+version is retired (in git history at v0.2.0). Ink gives the box, two columns, the live
+bordered input, and — the reason for the pivot — a *colour half-block pixel-art octopus*
+(cute googly eyes + dark bandit mask) that matches Claude's Ink-rendered creature. The
+remaining v0.2 items (live input box, boxing) fall out of Ink for free. Source: `src/`
+(`app.tsx`, `welcome.tsx`, `octopus.tsx`, `mock.ts`, `tools.ts`). Left to do: narrow-term
+collapse (flex should mostly handle it) and the optional exact-version gag.
+
+**v0.2.0 (Go, retired): box, columns, theme, status, effort, footer shipped.**
 
 # Making fraude's welcome a pixel-faithful Claude Code reskin
 

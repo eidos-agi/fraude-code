@@ -36,9 +36,14 @@ for **$0.00**.
 
 ## Install
 
+Built with [Ink](https://github.com/vadimdemedes/ink) — React for terminals, the same
+stack Claude Code itself uses. That's why the box, the live input, and the colour
+pixel-art octopus render like the real thing.
+
 ```
-go build -o bin/fraude-code .
-./bin/fraude-code
+npm install
+npm run build
+node dist/cli.js          # or: npm link, then `fraude`
 ```
 
 ## Use
@@ -47,9 +52,9 @@ It's a REPL. Type in plain-ish language; the fraud "understands" you with cheap
 pattern-matching and then does the **real** thing:
 
 ```
-❯ read main.go            # actually reads and prints the file
-❯ ls internal             # actually lists the directory
-❯ run go test ./...       # actually runs it (pipes/globs work — it's a real shell)
+❯ read src/app.tsx        # actually reads and prints the file
+❯ ls src                  # actually lists the directory
+❯ run npm test            # actually runs it (pipes/globs work — it's a real shell)
 ❯ ! git status            # ! is shorthand for run
 ❯ write hi.txt: hello     # actually writes the file
 ❯ what's the meaning of life?   # shrugs cutely — it can't think, remember

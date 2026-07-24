@@ -1,0 +1,13 @@
+{
+  "id": "c71596c0-6dee-40bb-9e21-6f15ece0156b",
+  "version": "0.1.0",
+  "projectName": "fraude-code",
+  "created": "2026-07-24",
+  "phase": "research",
+  "transitions": [
+    {
+      "phase": "research",
+      "date": "2026-07-24"
+    }
+  ]
+}

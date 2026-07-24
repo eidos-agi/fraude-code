@@ -1,0 +1,29 @@
+{
+  "name": "fraude-code",
+  "version": "0.3.0",
+  "description": "A Claude Code impersonator that does real work for $0.00 — built with Ink, like the real thing.",
+  "type": "module",
+  "bin": {
+    "fraude": "dist/cli.js",
+    "fraude-code": "dist/cli.js"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.tsx",
+    "start": "node dist/cli.js",
+    "test": "node --test dist/*.test.js"
+  },
+  "dependencies": {
+    "ink": "^5.0.1",
+    "ink-text-input": "^6.0.0",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.2"
+  },
+  "license": "MIT",
+  "engines": { "node": ">=18" }
+}

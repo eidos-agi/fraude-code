@@ -1,4 +1,5 @@
-/bin/
-/fraude-code
-*.test
+node_modules/
+dist/
+bin/
+*.log
 .DS_Store
