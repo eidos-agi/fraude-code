@@ -72,6 +72,8 @@ Not a jailbreak, not a model, not a wrapper around one. There is no API key fiel
 there is no API. If it ever tries to charge you, it's not fraude-code — *that* would be
 the real fraud.
 
+Bugs → Linear team `Eidos AGI`, project `Fraude Code` (see `.bugs.json`).
+
 MIT licensed. Impersonate responsibly.
 
 ## 🎭 The Fraude family
