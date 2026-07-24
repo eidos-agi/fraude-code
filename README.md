@@ -73,3 +73,11 @@ there is no API. If it ever tries to charge you, it's not fraude-code — *that*
 the real fraud.
 
 MIT licensed. Impersonate responsibly.
+
+## 🎭 The Fraude family
+
+- **[fraude-code](https://github.com/eidos-agi/fraude-code)** — this: a Claude Code look/act-alike that never calls a model.
+- **[fraude-os](https://github.com/eidos-agi/fraude-os)** — a parody desktop (Chrime/Gfail/Schemes/Extort) where every GUI action is a WebMCP tool.
+- **[chrime](https://github.com/eidos-agi/chrime)** — a browser built *for AI agents* (own the engine, DOM-first). The most real of the bunch.
+
+The brand is a costume; the work is real.
