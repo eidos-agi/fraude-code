@@ -55,6 +55,35 @@ pattern-matching and then does the **real** thing:
 ❯ /exit
 ```
 
+### Headless — `fraude -p`, the `claude -p` shape for $0.00
+
+The REPL needs a TTY. Schedulers, CI jobs, and container entrypoints don't have one — so
+`-p` runs a prompt, prints real tool output, and exits. This is what lets fraude stand in
+for `claude -p` in a harness you want to test **without spending tokens**:
+
+```bash
+fraude -p "ls ."
+fraude -p "run uname -a"
+
+# Each line that starts with a verb is one action, run in order. Lines that don't
+# are continuations — so multi-line write bodies survive intact.
+fraude -p "run df -h /data
+write /data/report.md: # Status
+all systems nominal"
+```
+
+`--output-format json` emits an envelope close enough to `claude -p --output-format json`
+that harnesses reading `.result`, `.session_id`, or `.total_cost_usd` work unchanged:
+
+```json
+{ "type": "result", "subtype": "success", "is_error": false, "duration_ms": 5,
+  "num_turns": 2, "result": "…", "session_id": "fraude-ms5ik74f", "total_cost_usd": 0 }
+```
+
+Exit code is **0** on success, **1** on failure. One deliberate difference from the REPL:
+an instruction fraude can't map to a tool is a **hard error**, not a cute shrug — a
+scheduler must never read "no brain" as a successful run.
+
 ## What's real vs. fake
 
 | Real (it does this) | Fake (it fakes this) |

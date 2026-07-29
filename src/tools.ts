@@ -75,5 +75,10 @@ function help(): string {
     /help                    this
     /exit                    leave
 
+  Headless, for schedulers and CI (no TTY needed):
+
+    fraude -p "ls ."                        one prompt, run it, exit
+    fraude -p "$SCRIPT" --output-format json  claude -p compatible envelope
+
   Anything else, it shrugs cutely — it can't actually think.`;
 }

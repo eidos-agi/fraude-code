@@ -1,6 +1,6 @@
 {
   "name": "fraude-code",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A Claude Code impersonator that does real work for $0.00 — built with Ink, like the real thing.",
   "type": "module",
   "bin": {
